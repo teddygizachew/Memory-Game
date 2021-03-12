@@ -1,0 +1,75 @@
+/* CSS files add styling rules to your content */
+
+@import url("https://fonts.googleapis.com/css?family=Zilla+Slab:400,500,600,700&display=swap");
+
+body {
+  font-family: helvetica, arial, sans-serif;
+  margin: 2em;
+  /* background: url("./img/bg.jpg");
+  background-size: cover;
+  background-position: center; */
+  background: #24272b;
+  color: #fafdf6;
+  font-family: "Zilla Slab", serif;
+}
+
+h1 {
+  font-weight: 700;
+  color: #f6f4f3;
+  letter-spacing: 0.2rem;
+}
+
+button {
+  outline: none;
+  display: inline-block;
+  padding: 8px 10px;
+  text-decoration: none;
+  border-radius: 10px;
+  border-color: #24272b;
+}
+
+#gameBtnsContianer > button {
+  width: 200px;
+  height: 200px;
+  margin: 2px;
+}
+
+.hidden {
+  display: none;
+}
+
+#Btn1 {
+  background: lightgreen;
+}
+
+#Btn1:active,
+#Btn1.lit {
+  background: green;
+}
+
+#Btn2 {
+  background: lightyellow;
+}
+
+#Btn2:active,
+#Btn2.lit {
+  background: yellow;
+}
+
+#Btn3 {
+  background: lightcoral;
+}
+
+#Btn3:active,
+#Btn3.lit {
+  background: red;
+}
+
+#Btn4 {
+  background: lightblue;
+}
+
+#Btn4:active,
+#Btn4.lit {
+  background: blue;
+}
