@@ -1,40 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
+<head>
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
 
-    <title>Hello!</title>
-    
-    <!-- import the webpage's stylesheet -->
-    <link rel="stylesheet" href="/style.css">
-    
-    <!-- import the webpage's javascript file -->
-    <script src="/script.js" defer></script>
-  </head>  
-  <body>
-    <h1>Memorize</h1>
-    
-    <p>
-      Welcome to Memorize! Test your memory skills in this fun and exciting game.
-    </p>
-    <p>
-      Rules: Just one! Repeat the patterns displayed by clicking on the cards below.
-    </p>
-    <p>
-      Have fun!
-    </p>
-    
-    <button id="startBtn" onclick="startGame()">Start</button>
-    <button id="stopBtn" class="hidden" onclick="stopGame()">End</button>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
 
-    <div id="gameBtnsContianer">
-        <button id="Btn1" onclick="guess(1)" onmousedown="startTone(1)" onmouseup="stopTone()"></button>
-        <button id="Btn2" onclick="guess(2)" onmousedown="startTone(2)" onmouseup="stopTone()"></button>
-        <button id="Btn3" onclick="guess(3)" onmousedown="startTone(3)" onmouseup="stopTone()"></button>
-        <button id="Btn4" onclick="guess(4)" onmousedown="startTone(4)" onmouseup="stopTone()"></button>
-    </div>
-    
-  </body>
+</head>
+<body onload="setTimerText()">
+
+    <main> 
+        <section class="glass">
+            <div class="dashboard">
+                <div class="user">
+                    <img src="https://cdn.glitch.com/b87cfcc3-2b1b-4b16-ae90-6a593187013a%2Fmem.png?v=1616091520332" alt="">
+                    <h3>Memory Game</h3>
+                </div>
+                <div class="links">
+                    <div class="intro">
+                        <p>👋Welcome to Memorize! </p>
+                        <p>Test your memory skills in this fun and exciting game.</p>
+                        <p>Rules: Just one! Repeat the patterns displayed by clicking on the cards below.</p>
+                        <!-- <p>Have fun!</p> -->
+                    </div>
+                    <button id="startBtn" onclick="startGame()">Start</button>
+                    <button id="stopBtn" class="hidden" onclick="stopGame()">End</button>
+                    
+                    <p id="mistakes-message" class="hidden">Mistakes = <span id="mistakes"></span>/3</p>
+                    <p id="message" class="hidden"><span id="mistakes"></span></p>
+                    <p id="guess-message" class="hidden2"></p>
+
+                    <h3 class="timer-class">Timer: <span id="time-left"></span></h3>
+                </div>
+            </div>
+            <div class="games">
+                <div class="status">
+                    <h1>Buttons</h1>
+                </div>
+                <div id="gameBtnsContianer">
+                    <button class="gameBtns" id="Btn1" onclick="guess(1)" onmousedown="startTone(1)" onmouseup="stopTone(1)"></button>
+                    <button class="gameBtns" id="Btn2" onclick="guess(2)" onmousedown="startTone(2)" onmouseup="stopTone(2)"></button>
+                    <button class="gameBtns" id="Btn3" onclick="guess(3)" onmousedown="startTone(3)" onmouseup="stopTone(3)"></button>
+                    <button class="gameBtns" id="Btn4" onclick="guess(4)" onmousedown="startTone(4)" onmouseup="stopTone(4)"></button>
+                    <button class="gameBtns" id="Btn5" onclick="guess(5)" onmousedown="startTone(5)" onmouseup="stopTone(5)"></button>
+                    <button class="gameBtns" id="Btn6" onclick="guess(6)" onmousedown="startTone(6)" onmouseup="stopTone(6)"></button>
+                    <button class="gameBtns" id="Btn7" onclick="guess(7)" onmousedown="startTone(7)" onmouseup="stopTone(7)"></button>
+                    <button class="gameBtns" id="Btn8" onclick="guess(8)" onmousedown="startTone(8)" onmouseup="stopTone(8)"></button>
+                </div>
+            </div>
+        </section>
+
+        <audio id="aud1" src="https://cdn.glitch.com/b87cfcc3-2b1b-4b16-ae90-6a593187013a%2Faud1.mp3?v=1616294619303"></audio>
+        <audio id="aud2" src="https://cdn.glitch.com/b87cfcc3-2b1b-4b16-ae90-6a593187013a%2Faud2-2.mp3?v=1616294619822"></audio>
+        <audio id="aud3" src="https://cdn.glitch.com/b87cfcc3-2b1b-4b16-ae90-6a593187013a%2Faud3.mp3?v=1616294619684"></audio>
+        <audio id="aud4" src="https://cdn.glitch.com/b87cfcc3-2b1b-4b16-ae90-6a593187013a%2Faud4-4.mp3?v=1616294619556"></audio>
+        <audio id="aud5" src="https://cdn.glitch.com/b87cfcc3-2b1b-4b16-ae90-6a593187013a%2Faud5-5.mp3?v=1616294620141"></audio>
+        <audio id="aud6" src="https://cdn.glitch.com/b87cfcc3-2b1b-4b16-ae90-6a593187013a%2Faud6-6.mp3?v=1616294619959"></audio>
+        <audio id="aud7" src="https://cdn.glitch.com/b87cfcc3-2b1b-4b16-ae90-6a593187013a%2Faud7-7.mp3?v=1616294620372"></audio>
+        <audio id="aud8" src="https://cdn.glitch.com/b87cfcc3-2b1b-4b16-ae90-6a593187013a%2Faud8-8.mp3?v=1616294620480"></audio>
+
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+        <div class="circle3"></div>
+        <div class="circle4"></div>
+        <!-- <button onclick="createRipple(event)">Start</button>
+        <button class="ripple">Start</button> -->
+    </main>
+</body>
+<script src="./script.js"></script>
 </html>
