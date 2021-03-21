@@ -16,7 +16,7 @@ var winnerGame = false;
 
 // Timer
 var timer;
-var gameTime = (60 * 1/60);
+var gameTime = (60 * 1/6);
 
 function randomPattern(min, max) {
   for (let i = 0; i < 3; i++) {
@@ -67,24 +67,24 @@ function stopGame() {
   clueHoldTime = originalClueHoldTime;
 }
 
-var audioooo1 = new Audio('./audio/aud1.mp3');
-var audioooo2 = new Audio('./audio/aud2-2.mp3');
-var audioooo3 = new Audio('./audio/aud3.mp3');
-var audioooo4 = new Audio('./audio/aud4-4.mp3');
-var audioooo5 = new Audio('./audio/aud5-5.mp3');
-var audioooo6 = new Audio('./audio/aud6-6.mp3');
-var audioooo7 = new Audio('./audio/aud7-7.mp3');
-var audioooo8 = new Audio('./audio/aud8-8.mp3');
+var audio1 = new Audio('https://cdn.glitch.com/b87cfcc3-2b1b-4b16-ae90-6a593187013a%2Faud1.mp3?v=1616294619303');
+var audio2 = new Audio('https://cdn.glitch.com/b87cfcc3-2b1b-4b16-ae90-6a593187013a%2Faud2-2.mp3?v=1616294619822');
+var audio3 = new Audio('https://cdn.glitch.com/b87cfcc3-2b1b-4b16-ae90-6a593187013a%2Faud3.mp3?v=1616294619684');
+var audio4 = new Audio('https://cdn.glitch.com/b87cfcc3-2b1b-4b16-ae90-6a593187013a%2Faud4-4.mp3?v=1616294619556');
+var audio5 = new Audio('https://cdn.glitch.com/b87cfcc3-2b1b-4b16-ae90-6a593187013a%2Faud5-5.mp3?v=1616294620141');
+var audio6 = new Audio('https://cdn.glitch.com/b87cfcc3-2b1b-4b16-ae90-6a593187013a%2Faud6-6.mp3?v=1616294619959');
+var audio7 = new Audio('https://cdn.glitch.com/b87cfcc3-2b1b-4b16-ae90-6a593187013a%2Faud7-7.mp3?v=1616294620372');
+var audio8 = new Audio('https://cdn.glitch.com/b87cfcc3-2b1b-4b16-ae90-6a593187013a%2Faud8-8.mp3?v=1616294620480');
 
 const audioMap = {
-  1: audioooo1,
-  2: audioooo2,
-  3: audioooo3,
-  4: audioooo4,
-  5: audioooo5,
-  6: audioooo6,
-  7: audioooo7,
-  8: audioooo8
+  1: audio1,
+  2: audio2,
+  3: audio3,
+  4: audio4,
+  5: audio5,
+  6: audio6,
+  7: audio7,
+  8: audio8
 };
 
 function playTone(btn, len) {
