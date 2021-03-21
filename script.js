@@ -16,7 +16,7 @@ var winnerGame = false;
 
 // Timer
 var timer;
-var gameTime = (60 * 1/10);
+var gameTime = (60 * 1/60);
 
 function randomPattern(min, max) {
   for (let i = 0; i < 3; i++) {
@@ -67,39 +67,30 @@ function stopGame() {
   clueHoldTime = originalClueHoldTime;
 }
 
-var audio1 = document.getElementById("aud1");
-var audio2 = document.getElementById("aud2");
-var audio3 = document.getElementById("aud3");
-var audio4 = document.getElementById("aud4");
-var audio5 = document.getElementById("aud5");
-var audio6 = document.getElementById("aud6");
-var audio7 = document.getElementById("aud7");
-var audio8 = document.getElementById("aud8");
+var audioooo1 = new Audio('./audio/aud1.mp3');
+var audioooo2 = new Audio('./audio/aud2-2.mp3');
+var audioooo3 = new Audio('./audio/aud3.mp3');
+var audioooo4 = new Audio('./audio/aud4-4.mp3');
+var audioooo5 = new Audio('./audio/aud5-5.mp3');
+var audioooo6 = new Audio('./audio/aud6-6.mp3');
+var audioooo7 = new Audio('./audio/aud7-7.mp3');
+var audioooo8 = new Audio('./audio/aud8-8.mp3');
+
+const audioMap = {
+  1: audioooo1,
+  2: audioooo2,
+  3: audioooo3,
+  4: audioooo4,
+  5: audioooo5,
+  6: audioooo6,
+  7: audioooo7,
+  8: audioooo8
+};
 
 function playTone(btn, len) {
-  if (btn == 1) {
-    audio1.play();
-  } else if (btn == 2) {
-    audio2.play();
-
-  } else if (btn == 3) {
-    audio3.play();
-    
-  } else if (btn == 4) {
-    audio4.play();
-    
-  } else if (btn == 5) {
-    audio5.play();
-    
-  } else if (btn == 6) {
-    audio6.play();
-    
-  } else if (btn == 7) {
-    audio7.play();
-    
-  } else if (btn == 8) {
-    audio8.play();
-  }
+  var temp = audioMap[btn];
+  temp.play();
+  console.log("audioMap");
   tonePlaying = true;
   setTimeout(function () {
     stopTone(btn);
@@ -109,71 +100,18 @@ function playTone(btn, len) {
 function startTone(btn) {
   // context.resume();
   if (!tonePlaying) {
-    if (btn == 1) {
-      audio1.play();
-    } else if (btn == 2) {
-      audio2.play();
-  
-    } else if (btn == 3) {
-      audio3.play();
-      
-    } else if (btn == 4) {
-      audio4.play();
-      
-    } else if (btn == 5) {
-      audio5.play();
-      
-    } else if (btn == 6) {
-      audio6.play();
-      
-    } else if (btn == 7) {
-      audio7.play();
-      
-    } else if (btn == 8) {
-      audio8.play();
-    }
+    var temp = audioMap[btn];
+    temp.play();
     tonePlaying = true;
   }
 }
 
 function stopTone(btn) {
-  if (btn == 1) {
-    audio1.pause();
-    audio1.currentTime = 0;
-  } else if (btn == 2) {
-    audio2.pause()
-    audio2.currentTime = 0;
-  } else if (btn == 3) {
-    audio3.pause();
-    audio3.currentTime = 0;
-    
-  } else if (btn == 4) {
-    audio4.pause();
-    audio4.currentTime = 0;
-    
-  } else if (btn == 5) {
-    audio5.pause();
-    audio5.currentTime = 0;
-    
-  } else if (btn == 6) {
-    audio6.pause();
-    audio6.currentTime = 0;
-    
-  } else if (btn == 7) {
-    audio7.pause();
-    audio7.currentTime = 0;
-  } else if (btn == 8) {
-    audio8.pause();
-    audio8.currentTime = 0;
-  }
+  var temp = audioMap[btn];
+  temp.pause();
+  temp.currentTime = 0;
   tonePlaying = false;
 }
-
-document.getElementById("startBtn").addEventListener('click', function() {
-  context.resume().then(() => {
-    console.log('Playback resumed successfully');
-  });
-});
 
 // Functions to light or clear the buttons
 function lightButton(btn) {
