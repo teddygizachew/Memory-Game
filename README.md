@@ -34,7 +34,7 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 
-- [ ] List anything else that you can get done to improve the app!
+- [x] Stops playing tone when mouse is released outside the button (onmouseup outisde the element)
 
 ## Video Walkthrough
 
@@ -45,6 +45,7 @@ Here's a walkthrough of implemented user stories:
 
 1. If you used any outside resources to help complete your submission (websites, books, people, etc) list them here.
     **https://www.w3schools.com/**
+    
 2. What was a challenge you encountered in creating this submission (be specific)? How did you overcome it? (recommended 200 - 400 words)
    [YOUR ANSWER HERE]
 
