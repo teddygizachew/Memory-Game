@@ -40,13 +40,13 @@ The following **additional** features are implemented:
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:<br />
-<img src="https://cdn.glitch.com/b87cfcc3-2b1b-4b16-ae90-6a593187013a%2Fgame1.gif?v=1616640607326" width=500><br /> -- [Game]
+<img src="game1.gif" width=500><br /> -- [Game]
 
-<img src="https://cdn.glitch.com/b87cfcc3-2b1b-4b16-ae90-6a593187013a%2Fresponsive.gif?v=1616640610536" width=500><br /> -- [Responsiveness]
+<img src="responsive.gif" width=500><br /> -- [Responsiveness]
 
-<img src="https://cdn.glitch.com/b87cfcc3-2b1b-4b16-ae90-6a593187013a%2FTimerEnd.gif?v=1616640613222" width=500><br /> -- [Timer]
+<img src="TimerEnd.gif" width=500><br /> -- [Timer]
 
-<img src="https://cdn.glitch.com/b87cfcc3-2b1b-4b16-ae90-6a593187013a%2Fmistakes.gif?v=1616640608989" width=500><br /> -- [Mistakes Counter]
+<img src="mistakes.gif" width=500><br /> -- [Mistakes Counter]
 
 
 ## Reflection Questions
