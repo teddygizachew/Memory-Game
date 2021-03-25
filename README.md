@@ -63,10 +63,10 @@ Here's a walkthrough of implemented user stories:<br />
     
 3. What questions about web development do you have after completing your submission? (recommended 100 - 300 words) <br />
    Questions: 
-   -	What are best practices in importing files such as images, audio and video, especially in static websites? 
-      - The reason I ask this is because when I did the audio feature for the game, I had the option to import the audio on the html and also on the script file. Glitch created the link to reference the source files from the assets folder.
-   -	How can page loading be done in a more effective way?
-      -	I tried using high quality images, but it took some time to display the images once the game started playing. I solved this by using smaller sized images, hence used the emojis as the background picture.
+   - What are best practices in importing files such as images, audio and video, especially in static websites?
+   --> The reason I ask this is because when I did the audio feature for the game, I had the option to import the audio on the html and also on the script file. Glitch created the link to reference the source files from the assets folder.
+   - How can page loading be done in a more effective way?
+   --> I tried using high quality images, but it took some time to display the images once the game started playing. I solved this by using smaller sized images, hence used the emojis as the background picture.
 
 4. If you had a few more hours to work on this project, what would you spend them doing (for example: refactoring certain functions, adding additional features, etc). Be specific. (recommended 100 - 300 words) <br />
    
