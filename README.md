@@ -38,7 +38,7 @@ The following **additional** features are implemented:
 
 ## Video Walkthrough
 
-Here's a walkthrough of implemented user stories:
+Here's a walkthrough of implemented user stories:<br />
 [Game]<img src="game1.gif" width=500><br />
 
 ![Responsive]<img src="responsive.gif" width=500><br />
