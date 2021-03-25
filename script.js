@@ -17,9 +17,10 @@ var winnerGame = false;
 // Timer
 var timer;
 var gameTime = (60 * 1/6);
+var rounds = 5;
 
 function randomPattern(min, max) {
-  for (let i = 0; i < 3; i++) {
+  for (let i = 0; i < rounds; i++) {
     pattern[i] = Math.floor(Math.random() * (max - min) + min);
   }
   console.log('pattern length: ' + pattern.length);
@@ -98,8 +99,11 @@ function playTone(btn, len) {
 }
 
 function startTone(btn) {
-  // context.resume();
   if (!tonePlaying) {
+    document.addEventListener("mouseup", function stopPlayOutside() {
+      stopTone(btn);
+      document.removeEventListener("mouseup", stopPlayOutside);
+    })
     var temp = audioMap[btn];
     temp.play();
     tonePlaying = true;
@@ -150,13 +154,15 @@ function playClueSequence() {
 
 // Check user's response in order to check that it matches with the correct sequence
 function loseGame() {
+  clearInterval(intervalId);
+  document.querySelector("#time-left").textContent = gameTime;
   stopGame();
   alert("Game Over. You lost.");
   resetTimer();
 }
 
 function winGame() {
-  winnerGame = true;
+  // winnerGame = true;
   stopGame();
   alert("Game Over. Congrats, You Won!");
   timer = 0;
@@ -178,6 +184,7 @@ function guess(btn) {
       // If it is the last turn
       if (progress == pattern.length - 1) {
         winGame();
+        winnerGame = true;
       } else {
         progress += 1;
 
@@ -227,10 +234,12 @@ function increaseClueHoldTime() {
   clueHoldTime = clueHoldTime + originalClueHoldTime / 10;
 }
 
+var intervalId;
+
 function startTimer() {
   timer = gameTime;
   // var minutes, seconds;
-  var intervalId = setInterval(function() {
+  intervalId = setInterval(function() {
     if (timer <= 0) {
       clearInterval(intervalId);
       if (winnerGame == false) {
@@ -239,12 +248,7 @@ function startTimer() {
       }
       resetTimer();
     }
-
-    if (winnerGame == true && timer > 0) {
-      // clearInterval(intervalId);
-      // resetTimer();
-    }
-
+    
     document.querySelector("#time-left").textContent = timer;
     console.log('---------timerrrrr-------: ' + timer);
     timer--;
