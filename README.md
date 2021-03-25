@@ -39,9 +39,11 @@ The following **additional** features are implemented:
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
-![Game](<img src="game1.gif" width=500><br>)
-![Responsive](<img src="responsive.gif" width=500><br>)
-![Timer](<img src="TimerEnd.gif" width=500><br>)
+[Game]<img src="game1.gif" width=500><br />
+
+![Responsive]<img src="responsive.gif" width=500><br />
+
+![Timer]<img src="TimerEnd.gif" width=500><br />
 
 
 ## Reflection Questions
