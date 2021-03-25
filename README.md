@@ -35,6 +35,7 @@ The following **optional** features are implemented:
 The following **additional** features are implemented:
 
 - [x] Stops playing tone when mouse is released outside the button (onmouseup outisde the element)
+- [x] Display mistakes made and amount of attempts left
 
 ## Video Walkthrough
 
