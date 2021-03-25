@@ -69,8 +69,7 @@ Here's a walkthrough of implemented user stories:<br />
 
 4. If you had a few more hours to work on this project, what would you spend them doing (for example: refactoring certain functions, adding additional features, etc). Be specific. (recommended 100 - 300 words) <br />
    - I’m quite satisfied with responsiveness and the styling of the game. The first thing I would work on is having the timer not count while the sequence is being played, including after making a mistake. Currently, the way that the timer is implemented doesn’t stop counting while the sequence of clues is being played. So, this one would be making some modification on the timer function, but most importantly figuring out where to connect the timer with _playClueSequence_. This certainly has made the game harder to play if the user is running short on time and has reached the last couple of rounds.
-   -One additional feature would be to give the user points if they win the game. I would set a counter for that and keep adding to it when the user wins the game. If the user wants to reset it, there would be a button (Reset) to restart the counter. If the user reaches a certain benchmark, a new level (activating a dormant function upon the win counter) would be opened.
-
+   - One additional feature would be to give the user points if they win the game. I would set a counter for that and keep adding to it when the user wins the game. If the user wants to reset it, there would be a button (Reset) to restart the counter. If the user reaches a certain benchmark, a new level (activating a dormant function upon the win counter) would be opened.
    - Another one could be an addition to the above – which is keeping a score board, potentailly with multiple users on the board.
 
 ## License
